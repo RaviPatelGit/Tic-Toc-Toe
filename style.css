@@ -1,3 +1,66 @@
 h1 {
   text-align: center;
 }
+
+.divBoard {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.divOne {
+  grid-area: 1/1;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divTwo {
+  grid-area: 1/2;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divThree {
+  grid-area: 1/3;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divFour {
+  grid-area: 2/1;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divFive {
+  grid-area: 2/2;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divSix {
+  grid-area: 2/3;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divSeven {
+  grid-area: 3/1;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divEight {
+  grid-area: 3/2;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
+
+.divNine {
+  grid-area: 3/3;
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
+}
