@@ -11,55 +11,55 @@ h1 {
   justify-content: center;
 }
 
-.divOne {
+.div0 {
   grid-area: 1/1;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divTwo {
+.div1 {
   grid-area: 1/2;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divThree {
+.div2 {
   grid-area: 1/3;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divFour {
+.div3 {
   grid-area: 2/1;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divFive {
+.div4 {
   grid-area: 2/2;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divSix {
+.div5 {
   grid-area: 2/3;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divSeven {
+.div6 {
   grid-area: 3/1;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divEight {
+.div7 {
   grid-area: 3/2;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
 }
 
-.divNine {
+.div8 {
   grid-area: 3/3;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
