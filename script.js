@@ -169,10 +169,12 @@ const gameController = (()=>{
         if (field == undefined){
             gameBoard.setField(num, _humanPlayer);
             if(checkWin(gameBoard) ){
-                console.log(gameBoard._board);
+                // console.log(gameBoard._board);
                 console.log('Human Won')
+                endGame('X')
             } else if (checkDraw(gameBoard)) {
                 console.log('Draw after Human move')
+                endGame('D')
             } else {
                 // (async () => {
                 //     await _sleep(250 + (Math.random()*300))
@@ -195,8 +197,10 @@ const gameController = (()=>{
         gameBoard.setField(aiChoice, _aiPlayer);
         if(checkWin(gameBoard) ){
             console.log('AI Won')
+            endGame('O')
         } else if (checkDraw(gameBoard)) {
-            console.log('Draw after AI move')
+            console.log('Draw')
+            endGame('D')
         } else {
             
             // if(!checkWin(gameBoard)){
@@ -209,7 +213,7 @@ const gameController = (()=>{
     const checkWin = (board)=>{
 
         const ticArray=board._board;
-        console.log('ticArray', ticArray);
+        // console.log('ticArray', ticArray);
         
         // console.log('1stRow', (ticArray[0]==ticArray[1]==ticArray[2])!=undefined));
         
@@ -246,12 +250,28 @@ const gameController = (()=>{
 
         // console.log('_checkRow', _checkRow());
         // console.log('_checkColumn', _checkColumn());
-        console.log('_checkDiag', _checkDiagonal());
+        // console.log('_checkDiag', _checkDiagonal());
 
         if(_checkRow() || _checkColumn() || _checkDiagonal()){
             return true
         }
         return false
+    }
+
+    const endGame = (sign)=>{
+        const htmlFields = document.querySelectorAll('.endgame>.p');
+
+        if (sign=='X'){
+            htmlFields[0].classList.remove('hide');
+            htmlFields[1].classList.remove('hide');
+        } else if (sign=='O') {
+            htmlFields[0].classList.remove('hide');
+            htmlFields[2].classList.remove('hide');
+        } else {
+            htmlFields[0].classList.remove('hide');
+            htmlFields[3].classList.remove('hide');
+        }
+        
     }
 
     const checkDraw = (board) => !(board._board.includes(undefined));
@@ -262,7 +282,7 @@ const gameController = (()=>{
         checkWin,
         checkDraw,
         playerStep,
-        // endGame,
+        endGame,
     }
 })();
 

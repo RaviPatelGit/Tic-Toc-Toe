@@ -2,6 +2,14 @@ h1 {
   text-align: center;
 }
 
+.endgame {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: rgb(83, 5, 5);
+  z-index: 1;
+  text-align: center;
+}
+
 .divBoard {
   display: grid;
 
@@ -69,4 +77,9 @@ h1 {
   grid-area: 3/3;
   border: 2px solid;
   border-color: rgb(107, 107, 240);
+}
+
+.hide {
+  text-align: center;
+  display: none;
 }
