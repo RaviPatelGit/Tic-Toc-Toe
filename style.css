@@ -4,11 +4,17 @@ h1 {
 
 .divBoard {
   display: grid;
+
   grid-template-rows: 100px 100px 100px;
   grid-template-columns: 100px 100px 100px;
   gap: 10px;
   text-align: center;
   justify-content: center;
+}
+
+.field {
+  border: 2px solid;
+  border-color: rgb(107, 107, 240);
 }
 
 .div0 {
