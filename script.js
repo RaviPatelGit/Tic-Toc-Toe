@@ -271,6 +271,7 @@ const gameController = (()=>{
             htmlFields[0].classList.remove('hide');
             htmlFields[3].classList.remove('hide');
         }
+        gameBoard.clear()
         
     }
 
@@ -290,10 +291,29 @@ const gameController = (()=>{
 const displayController = (()=>{
     const htmlBoard = Array.from(document.querySelectorAll('.field'));
 
+    restartButton = document.querySelector('.restart>button');
+    restartButton.addEventListener('click', ()=>{
+        gameBoard.clear();
+        clear();
+        console.log('clicked')
+    });
+
+    // const restart = () => {
+       
+    //     // restartButton.textContent = 'clicked';
+    // }
+
+
     const clear = ()=>{
         htmlBoard.forEach(field => {
-            field.childNodes[0].textContent=''
+            field.textContent=''
         })
+        const htmlFields = document.querySelectorAll('.endgame>.p');
+        htmlFields[0].classList.add('hide');
+        htmlFields[1].classList.add('hide');
+        htmlFields[2].classList.add('hide');
+        htmlFields[3].classList.add('hide');
+
     }
 
     const _init = (() => {
@@ -303,9 +323,12 @@ const displayController = (()=>{
         }
     })();
 
+    // restart();
+
 
     return {
-        clear
+        clear,
+        // restart
     }
 })();
 

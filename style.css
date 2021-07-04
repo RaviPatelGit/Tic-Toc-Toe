@@ -2,6 +2,17 @@ h1 {
   text-align: center;
 }
 
+.restart {
+  margin: 2rem;
+  text-align: center;
+}
+
+.restart > button {
+  padding: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
 .endgame {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
